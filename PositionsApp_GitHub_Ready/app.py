@@ -10,8 +10,8 @@ st.subheader("🔍 Debugging Info (for deployment)")
 st.write("Files in current directory:")
 st.write(os.listdir())
 
-# File path
-file_path = "PositionsCalcStocks_Final.xlsx"
+# 🔧 Updated file path (inside folder)
+file_path = "PositionsApp_GitHub_Ready/PositionsCalcStocks_Final.xlsx"
 
 # Try loading the Excel file
 try:
@@ -45,7 +45,7 @@ try:
         st.warning("⚠️ Entry price must be greater than stop loss.")
 
 except FileNotFoundError:
-    st.error("❌ Excel file not found. Please make sure 'PositionsCalcStocks_Final.xlsx' is in the root directory of your GitHub repo.")
+    st.error("❌ Excel file not found. Please make sure the path is correct.")
 
 except Exception as e:
     st.error(f"❌ Error loading Excel file: {e}")
